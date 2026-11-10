@@ -1,0 +1,120 @@
+{
+  "source_model": "ronaldo-mocap.blend",
+  "output": "ronaldo-natural.glb",
+  "sha256": "a5549264a42498d896e27f66de7ab4f3e06045539457d32ce077e4c8bed26141",
+  "changes": [
+    "Removed photo-painted open mouth and duplicate eyelid features with a feathered native CC0 skin bake",
+    "Reduced eye cap protrusion; circular pupils and darker brown irises",
+    "Added skin eyelid BlinkLeft/BlinkRight and bounded iris/pupil LookLeft/Right/Up/Down morphs",
+    "Added subtle Smile and Focus skin morphs",
+    "Replaced silver baked hair highlights with directional dark brown grain",
+    "Broadened lower jaw at most4.5percent",
+    "Damped Idle torso rotations30percent and neck/head20percent; otherbodyanimationtracksunchanged",
+    "Relaxed finger curl to55percent and thumb19.36degree adduction from measured palm geometry",
+    "Replaced overhanging hair cap with continuous charcoal close-crop and matching templefade baked on the actual head surface; no separate cap geometry"
+  ],
+  "sources": {
+    "base": "Existing MPFB CC0 model",
+    "portrait": "Existing Anna Nessi soccer.ru photo CC BY-SA3.0",
+    "motion": "Existing CMU motion clips; not Ronaldo performance capture"
+  },
+  "validation": {
+    "bone_count": 53,
+    "animation_durations_preserved": {
+      "Dive_Ronaldo_Rig": 1.0666666666666667,
+      "Fall_Ronaldo_Rig": 1.0666666666666667,
+      "Idle": 2,
+      "Kick": 1.75,
+      "Run": 0.8,
+      "RunStop": 1.3,
+      "TurnLeft": 1.3333333333333333,
+      "TurnRight": 1.7333333333333334,
+      "Walk": 1.1833333333333333
+    },
+    "morphs": {
+      "Sphere.011": [
+        "LookLeft",
+        "LookRight",
+        "LookUp",
+        "LookDown"
+      ],
+      "Sphere.014": [
+        "LookLeft",
+        "LookRight",
+        "LookUp",
+        "LookDown"
+      ],
+      "Sphere.012": [
+        "LookLeft",
+        "LookRight",
+        "LookUp",
+        "LookDown"
+      ],
+      "Sphere.015": [
+        "LookLeft",
+        "LookRight",
+        "LookUp",
+        "LookDown"
+      ],
+      "base": [
+        "BlinkLeft",
+        "BlinkRight",
+        "Smile",
+        "Focus"
+      ]
+    },
+    "unchanged_translation_tracks": 477,
+    "final_clip_names": [
+      "Dive_Ronaldo_Rig",
+      "Fall_Ronaldo_Rig",
+      "Idle",
+      "Kick",
+      "Run",
+      "RunStop",
+      "TurnLeft",
+      "TurnRight",
+      "Walk"
+    ],
+    "final_meshes": [
+      "Sphere.002",
+      "Sphere.003",
+      "Sphere.004",
+      "Sphere.007",
+      "Sphere.008",
+      "Sphere.009",
+      "Sphere.001",
+      "Sphere.006",
+      "Sphere",
+      "Sphere.005",
+      "boots",
+      "Sphere.010",
+      "Sphere.013",
+      "Sphere.011",
+      "Sphere.014",
+      "jersey",
+      "Sphere.012",
+      "Sphere.015",
+      "base",
+      "shirt_back_name",
+      "shirt_back_number",
+      "collar",
+      "shirt_crest",
+      "shirt_front_number",
+      "short_number",
+      "shorts",
+      "sock_cuff",
+      "socks"
+    ]
+  },
+  "limitations": [
+    "Hand-finger motion is posed, not captured",
+    "No facial performance capture or photogrammetric scan",
+    "Stylized approximate likeness, not photorealism"
+  ],
+  "pipeline": [
+    "model-source/build_natural.py",
+    "model-source/finish_natural.py",
+    "model-source/short_crop_finish.py",
+    "model-source/continuous_crop_finish.py"
+  ]
+}

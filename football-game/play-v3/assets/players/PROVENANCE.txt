@@ -1,0 +1,31 @@
+PLAYER MODEL PROVENANCE — 2026-11-08
+
+The seven GLB files in this directory are locally authored stylized interpretations.
+They are not official scans, licensed sports-game assets, or photoreal reconstructions.
+Each has an individual source face, hair treatment, shirt identity, number and height.
+The shared MPFB/MakeHuman human topology is distributed under CC0 1.0.
+See ../LICENSE-MPFB-CC0.txt.
+
+Tools: Blender 4.2.23 LTS, local MPFB / MakeHuman assets.
+Source geometry: https://github.com/makehumancommunity/mpfb2
+Animation: local authored keyframes, six actions on a shared 53-bone rig.
+No paid model generation service was used.
+
+Courtois, Mbappe, Haaland, Neymar, Salah, Bellingham face materials:
+Each uses the corresponding existing AI-created portrait from the project game/assets
+directory, mapped onto curved physical face and eye geometry in Blender.
+Original raster files are unmodified. Their front-view appearance is not a complete
+three-dimensional likeness reconstruction; side/back appearance is an interpretation.
+
+Messi face material:
+Author: Hossein Zohrevand / Tasnim News Agency
+Title: Lionel Messi playing for Argentina at the 2022 FIFA World Cup
+Source: https://commons.wikimedia.org/wiki/File:Lionel-Messi-Argentina-2022-FIFA-World-Cup.jpg
+License: Creative Commons Attribution 4.0 International
+License URL: https://creativecommons.org/licenses/by/4.0/
+Changes: The unmodified original image is embedded as a texture; its face region is
+projected with custom UV coordinates onto the head mesh. Low source resolution limits
+close-up quality. No endorsement by the subject or photographer is implied.
+
+Reproduction script: ../../model-source/players/build_players.py
+Model registry: players.json

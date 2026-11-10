@@ -1,0 +1,80 @@
+[
+  {
+    "file": "fan-1-lod.glb",
+    "bytes": 772328,
+    "clips": [
+      "Cheer",
+      "Disappointed",
+      "Idle",
+      "Rise",
+      "Seated",
+      "Sit"
+    ],
+    "skinJoints": 53
+  },
+  {
+    "file": "fan-1.glb",
+    "bytes": 2433248,
+    "clips": [
+      "Cheer",
+      "Disappointed",
+      "Idle",
+      "Rise",
+      "Seated",
+      "Sit"
+    ],
+    "skinJoints": 53
+  },
+  {
+    "file": "fan-2-lod.glb",
+    "bytes": 747524,
+    "clips": [
+      "Cheer",
+      "Disappointed",
+      "Idle",
+      "Rise",
+      "Seated",
+      "Sit"
+    ],
+    "skinJoints": 53
+  },
+  {
+    "file": "fan-2.glb",
+    "bytes": 2078632,
+    "clips": [
+      "Cheer",
+      "Disappointed",
+      "Idle",
+      "Rise",
+      "Seated",
+      "Sit"
+    ],
+    "skinJoints": 53
+  },
+  {
+    "file": "fan-3-lod.glb",
+    "bytes": 766472,
+    "clips": [
+      "Cheer",
+      "Disappointed",
+      "Idle",
+      "Rise",
+      "Seated",
+      "Sit"
+    ],
+    "skinJoints": 53
+  },
+  {
+    "file": "fan-3.glb",
+    "bytes": 2202188,
+    "clips": [
+      "Cheer",
+      "Disappointed",
+      "Idle",
+      "Rise",
+      "Seated",
+      "Sit"
+    ],
+    "skinJoints": 53
+  }
+]

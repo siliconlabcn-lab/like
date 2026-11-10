@@ -1,0 +1,72 @@
+{
+  "provider": "CMU Graphics Lab Motion Capture Database",
+  "homepage": "https://mocap.cs.cmu.edu/",
+  "downloaded": "2026-11-08",
+  "license": {
+    "use": "CMU permits use in research and inclusion in commercially sold products. Direct resale of motion data, even converted, is prohibited.",
+    "acknowledgement": "The data used in this project was obtained from mocap.cs.cmu.edu. The database was created with funding from NSF EIA-0196217.",
+    "source": "https://mocap.cs.cmu.edu/"
+  },
+  "files": [
+    {
+      "name": "10.asf",
+      "url": "https://mocap.cs.cmu.edu/subjects/10/10.asf",
+      "sha256": "d4e604fd582403e9f4bca3382e74dd0cc01e15cd712255e7bd34863b922b6200"
+    },
+    {
+      "name": "10_01.amc",
+      "url": "https://mocap.cs.cmu.edu/subjects/10/10_01.amc",
+      "sha256": "4277e748947e8703825f340f94582f48997ca01b308f2447075eab4c42029e84"
+    },
+    {
+      "name": "10_03.amc",
+      "url": "https://mocap.cs.cmu.edu/subjects/10/10_03.amc",
+      "sha256": "ffc0f091c8eeb3392797933e23612540a711a07f9a7a49d62c7d1c6d0128a290"
+    },
+    {
+      "name": "16.asf",
+      "url": "https://mocap.cs.cmu.edu/subjects/16/16.asf",
+      "sha256": "2323f876564610f84bfbec9b90b8ebffb57515673b7f4a45b0fb0849af465bdb"
+    },
+    {
+      "name": "16_15.amc",
+      "url": "https://mocap.cs.cmu.edu/subjects/16/16_15.amc",
+      "sha256": "0873a7753a04c34de2a94dc768b61ef4ed8395f0bd351c2019864b16883b0f89"
+    },
+    {
+      "name": "16_35.amc",
+      "url": "https://mocap.cs.cmu.edu/subjects/16/16_35.amc",
+      "sha256": "28e83b8ee8ff46e15cb7d41d5e77faaefe3e06cf165f05fb18dd348457bdf387"
+    },
+    {
+      "name": "16_41.amc",
+      "url": "https://mocap.cs.cmu.edu/subjects/16/16_41.amc",
+      "sha256": "9668934d40c782c803857d2501f1cbdd7987ce3ae5f62eac9a3bc784ca459511"
+    },
+    {
+      "name": "16_43.amc",
+      "url": "https://mocap.cs.cmu.edu/subjects/16/16_43.amc",
+      "sha256": "579c9a2f678c7ab85fc0372d084e5d55d80f8e71473584f4510c7f22490a675a"
+    },
+    {
+      "name": "16_57.amc",
+      "url": "https://mocap.cs.cmu.edu/subjects/16/16_57.amc",
+      "sha256": "ae00399e82615e63be9590e0e11c679a5f033111a656e9ffbbb0a3e3060a01cd"
+    }
+  ],
+  "processing": [
+    "ASF/AMC forward kinematics at 120fps",
+    "Retarget to existing MakeHuman MPFB skeleton",
+    "60fps animation baking",
+    "Remove horizontal root displacement and heading into mocap-contract.json",
+    "Preserve recorded vertical body and limb timing",
+    "Normalize loop endpoint residual; shoe support height correction",
+    "CMU does not capture fingers: manually posed relaxed fingers, forearm-following wrists"
+  ],
+  "limitations": [
+    "Recorded performer is not Cristiano Ronaldo; these are generic human motions.",
+    "CMU early captures may contain marker noise; fingers are not captured.",
+    "Dive and Fall retained from previous prototype only for role compatibility.",
+    "No new facial capture or scanned face included."
+  ]
+}

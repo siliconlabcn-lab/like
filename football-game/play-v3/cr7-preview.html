@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C 罗 · 3D 模型预览</title>
+<script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#121b20;color:#f4f1e8;font:16px system-ui,sans-serif}
+main{max-width:1100px;margin:auto;padding:24px clamp(14px,4vw,42px)}
+a{color:#f4d990}
+h1{margin:12px 0 6px;font-size:clamp(28px,5vw,44px)}
+p{color:#bcc7cc;margin:0 0 14px}
+figure{margin:14px 0 0}
+#stage{height:clamp(360px,68vh,740px);position:relative;border:1px solid #ffffff28;border-radius:14px;overflow:hidden;background:#26343b;touch-action:none;cursor:grab}
+#stage:active{cursor:grabbing}
+canvas{display:block}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+button{color:inherit;background:#26343b;border:1px solid #ffffff38;padding:9px 14px;border-radius:7px;font:inherit;cursor:pointer}
+button[aria-pressed=true]{background:#f4d990;color:#20251d;border-color:transparent}
+button:focus-visible,a:focus-visible,#stage:focus-visible{outline:2px solid #f4d990;outline-offset:3px}
+#status{position:absolute;left:12px;bottom:10px;margin:0;pointer-events:none;background:#121b20d9;padding:5px 9px;border-radius:4px}
+figcaption{margin-top:10px;color:#bcc7cc;font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<a href="./">返回比赛</a>
+<h1>C 罗 · 3D 模型预览</h1>
+<p>拖动旋转模型，切换素模可查看鼻梁、下颌和侧脸的立体轮廓。</p>
+<div class="controls" aria-label="模型视角">
+<button data-view="face" aria-pressed="true">正脸</button>
+<button data-view="profile" aria-pressed="false">侧脸</button>
+<button data-view="body" aria-pressed="false">全身</button>
+<button data-view="boots" aria-pressed="false">球鞋</button>
+<button id="clay" aria-pressed="false">素模</button>
+</div>
+<figure>
+<div id="stage" tabindex="0" aria-label="C 罗 3D 模型，使用左右方向键旋转">
+<p id="status" role="status">正在载入模型…</p>
+</div>
+<figcaption>球鞋按 Nike CR7 Mercurial Superfly RGN SE 金白配色制作。<a href="credits.html">模型与球鞋来源</a></figcaption>
+</figure>
+</main>
+<script type="module" src="./cr7-preview.js?v=3x"></script>
+</body>
+</html>

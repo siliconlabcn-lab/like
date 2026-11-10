@@ -1,0 +1,20 @@
+Cristiano Ronaldo 2018 photo: Anna Nessi (Анна Нэсси) / soccer.ru.
+Source: https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_2018.jpg
+License: Creative Commons Attribution-ShareAlike 3.0 Unported
+https://creativecommons.org/licenses/by-sa/3.0/
+
+Changes: facial portion projected symmetrically onto a shaped 3D head,
+feathered with a CC0 MakeHuman skin texture, and baked into a UV atlas.
+The resulting Ronaldo_skin_atlas / ronaldo-skin-atlas.png texture and its
+embedded copy in ronaldo.glb are distributed under CC BY-SA 3.0.
+This is an unofficial fan interpretation, not an endorsed product or scan.
+
+Human base mesh, eyes fitting data and native skin: MakeHuman Community,
+CC0 1.0. Skin source:
+https://files2.makehumancommunity.org/asset_packs/makehuman_system_assets/makehuman_system_assets_cc0.zip
+Geometry tooling: https://github.com/makehumancommunity/mpfb2
+Blender: https://www.blender.org/
+
+Clothing, hair geometry and animation curves were authored locally for this
+project. No paid generation service was used.
+Hair material also samples the same licensed photograph through a custom UV projection.

@@ -1,0 +1,51 @@
+{
+  "output": "ronaldo.glb",
+  "geometry": {
+    "license_file": "LICENSE-MPFB-CC0.txt",
+    "source": "MPFB / MakeHuman standard human basemesh",
+    "license": "CC0 1.0"
+  },
+  "tools": {
+    "blender": "4.2.23 LTS portable from download.blender.org",
+    "mpfb": "https://github.com/makehumancommunity/mpfb2"
+  },
+  "animations": {
+    "source": "CMU Graphics Lab captured human motion, retargeted to MPFB rig",
+    "motion_provenance": "CMU-MOTION-PROVENANCE.json",
+    "names": [
+      "Idle",
+      "Walk",
+      "Run",
+      "TurnLeft",
+      "TurnRight",
+      "RunStop",
+      "Kick",
+      "Dive",
+      "Fall"
+    ],
+    "kick_contact_seconds": 0.9,
+    "legacy_actions": [
+      "Dive",
+      "Fall"
+    ],
+    "facial_capture": false,
+    "performer_is_ronaldo": false
+  },
+  "coordinates": {
+    "forward": "+Z",
+    "height_meters": 1.87,
+    "up": "+Y"
+  },
+  "appearance": {
+    "clothing": "Locally authored Portugal-inspired red jersey with 7, green shorts, socks and boots",
+    "likeness": "Shaped and photo-textured fan interpretation, not an official scan or licensed game asset",
+    "face": "Anna Nessi / soccer.ru, Cristiano Ronaldo 2018, CC BY-SA 3.0; symmetrically projected and feathered into CC0 MakeHuman skin. See RONALDO-ATTRIBUTION.txt"
+  },
+  "created": "2026-11-08",
+  "eyes": {
+    "source": "https://github.com/makehumancommunity/makehuman/tree/master/makehuman/data/eyes/low-poly",
+    "license": "CC0 1.0",
+    "use": "Eye location fit from official low-poly MHCLO; spherical eye meshes generated locally"
+  },
+  "paid_services_used": false
+}

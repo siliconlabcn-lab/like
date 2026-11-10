@@ -1,0 +1,121 @@
+[
+  {
+    "model": "bellingham.glb",
+    "everyPrimitiveHasSkinWeights": true,
+    "meshNodeHasSkin": true,
+    "reimportedMeshDeformation": {
+      "Run": {
+        "maximumVertexDisplacementMeters": 0.56,
+        "verticesMovedOver3cm": 13790,
+        "totalVertices": 26985
+      },
+      "Kick": {
+        "maximumVertexDisplacementMeters": 1.0601,
+        "verticesMovedOver3cm": 17480,
+        "totalVertices": 26985
+      }
+    }
+  },
+  {
+    "model": "courtois.glb",
+    "everyPrimitiveHasSkinWeights": true,
+    "meshNodeHasSkin": true,
+    "reimportedMeshDeformation": {
+      "Run": {
+        "maximumVertexDisplacementMeters": 0.6021,
+        "verticesMovedOver3cm": 14157,
+        "totalVertices": 27453
+      },
+      "Kick": {
+        "maximumVertexDisplacementMeters": 1.1399,
+        "verticesMovedOver3cm": 17703,
+        "totalVertices": 27453
+      }
+    }
+  },
+  {
+    "model": "haaland.glb",
+    "everyPrimitiveHasSkinWeights": true,
+    "meshNodeHasSkin": true,
+    "reimportedMeshDeformation": {
+      "Run": {
+        "maximumVertexDisplacementMeters": 0.5871,
+        "verticesMovedOver3cm": 13988,
+        "totalVertices": 26795
+      },
+      "Kick": {
+        "maximumVertexDisplacementMeters": 1.1114,
+        "verticesMovedOver3cm": 17872,
+        "totalVertices": 26795
+      }
+    }
+  },
+  {
+    "model": "mbappe.glb",
+    "everyPrimitiveHasSkinWeights": true,
+    "meshNodeHasSkin": true,
+    "reimportedMeshDeformation": {
+      "Run": {
+        "maximumVertexDisplacementMeters": 0.5359,
+        "verticesMovedOver3cm": 13658,
+        "totalVertices": 26869
+      },
+      "Kick": {
+        "maximumVertexDisplacementMeters": 1.0145,
+        "verticesMovedOver3cm": 17329,
+        "totalVertices": 26869
+      }
+    }
+  },
+  {
+    "model": "messi.glb",
+    "everyPrimitiveHasSkinWeights": true,
+    "meshNodeHasSkin": true,
+    "reimportedMeshDeformation": {
+      "Run": {
+        "maximumVertexDisplacementMeters": 0.5118,
+        "verticesMovedOver3cm": 13534,
+        "totalVertices": 26933
+      },
+      "Kick": {
+        "maximumVertexDisplacementMeters": 0.9689,
+        "verticesMovedOver3cm": 17141,
+        "totalVertices": 26933
+      }
+    }
+  },
+  {
+    "model": "neymar.glb",
+    "everyPrimitiveHasSkinWeights": true,
+    "meshNodeHasSkin": true,
+    "reimportedMeshDeformation": {
+      "Run": {
+        "maximumVertexDisplacementMeters": 0.5269,
+        "verticesMovedOver3cm": 13608,
+        "totalVertices": 26443
+      },
+      "Kick": {
+        "maximumVertexDisplacementMeters": 0.9974,
+        "verticesMovedOver3cm": 17259,
+        "totalVertices": 26443
+      }
+    }
+  },
+  {
+    "model": "salah.glb",
+    "everyPrimitiveHasSkinWeights": true,
+    "meshNodeHasSkin": true,
+    "reimportedMeshDeformation": {
+      "Run": {
+        "maximumVertexDisplacementMeters": 0.5269,
+        "verticesMovedOver3cm": 13608,
+        "totalVertices": 25745
+      },
+      "Kick": {
+        "maximumVertexDisplacementMeters": 0.9974,
+        "verticesMovedOver3cm": 17259,
+        "totalVertices": 25745
+      }
+    }
+  }
+]

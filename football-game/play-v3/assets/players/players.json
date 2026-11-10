@@ -1,0 +1,114 @@
+[
+  {
+    "id": "courtois",
+    "url": "assets/players/courtois.glb",
+    "height": 2.0,
+    "sourcePortrait": "../game/assets/courtois.png",
+    "quality": "Stylized interpretation using its own source portrait, authored hair and silhouette; not a scan",
+    "clips": [
+      "Celebrate",
+      "Dive",
+      "Fall",
+      "Idle",
+      "Kick",
+      "Run"
+    ],
+    "bytes": 4477192
+  },
+  {
+    "id": "mbappe",
+    "url": "assets/players/mbappe.glb",
+    "height": 1.78,
+    "sourcePortrait": "../game/assets/mbappe.png",
+    "quality": "Stylized interpretation using its own source portrait, authored hair and silhouette; not a scan",
+    "clips": [
+      "Celebrate",
+      "Dive",
+      "Fall",
+      "Idle",
+      "Kick",
+      "Run"
+    ],
+    "bytes": 4456088
+  },
+  {
+    "id": "haaland",
+    "url": "assets/players/haaland.glb",
+    "height": 1.95,
+    "sourcePortrait": "../game/assets/haaland.png",
+    "quality": "Stylized interpretation using its own source portrait, authored hair and silhouette; not a scan",
+    "clips": [
+      "Celebrate",
+      "Dive",
+      "Fall",
+      "Idle",
+      "Kick",
+      "Run"
+    ],
+    "bytes": 4502332
+  },
+  {
+    "id": "neymar",
+    "url": "assets/players/neymar.glb",
+    "height": 1.75,
+    "sourcePortrait": "../game/assets/neymar.png",
+    "quality": "Stylized interpretation using its own source portrait, authored hair and silhouette; not a scan",
+    "clips": [
+      "Celebrate",
+      "Dive",
+      "Fall",
+      "Idle",
+      "Kick",
+      "Run"
+    ],
+    "bytes": 4513256
+  },
+  {
+    "id": "salah",
+    "url": "assets/players/salah.glb",
+    "height": 1.75,
+    "sourcePortrait": "../game/assets/salah.png",
+    "quality": "Stylized interpretation using its own source portrait, authored hair and silhouette; not a scan",
+    "clips": [
+      "Celebrate",
+      "Dive",
+      "Fall",
+      "Idle",
+      "Kick",
+      "Run"
+    ],
+    "bytes": 4393904
+  },
+  {
+    "id": "bellingham",
+    "url": "assets/players/bellingham.glb",
+    "height": 1.86,
+    "sourcePortrait": "../game/assets/bellingham.png",
+    "quality": "Stylized interpretation using its own source portrait, authored hair and silhouette; not a scan",
+    "clips": [
+      "Celebrate",
+      "Dive",
+      "Fall",
+      "Idle",
+      "Kick",
+      "Run"
+    ],
+    "bytes": 4417804
+  },
+  {
+    "id": "messi",
+    "url": "assets/players/messi.glb",
+    "height": 1.7,
+    "sourcePortrait": "../game/assets/messi-photo.jpg",
+    "quality": "Stylized interpretation using its own source portrait, authored hair and silhouette; not a scan",
+    "clips": [
+      "Celebrate",
+      "Dive",
+      "Fall",
+      "Idle",
+      "Kick",
+      "Run"
+    ],
+    "bytes": 2422036
+  }
+]

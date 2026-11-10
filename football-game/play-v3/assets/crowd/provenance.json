@@ -1,0 +1,36 @@
+{
+  "source": "https://www.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+  "download": "https://files2.makehumancommunity.org/asset_packs/makehuman_system_assets/makehuman_system_assets_cc0.zip",
+  "license": "CC0 1.0",
+  "geometry": "MPFB / MakeHuman human base mesh, official game-engine rig and official MHCLO clothes and hair",
+  "skins": [
+    "young_caucasian_male",
+    "young_african_male",
+    "young_asian_female"
+  ],
+  "animation": "Locally authored bone-keyframe Idle, Cheer, Disappointed",
+  "axes": "Y up, +Z facing, meters; model feet at Y~0",
+  "intended_use": "Three anonymous human spectators; no celebrity identities. High detail for broadcast close-up, separate decimated LOD for stadium crowd",
+  "limitations": "Game-ready textured human models, not photoreal scanned actors or filmed spectators.",
+  "paid_services_used": false,
+  "motion_update": {
+    "source": "Carnegie Mellon University Graphics Lab Motion Capture Database",
+    "source_files": [
+      "13/13_01.amc",
+      "79/79_69.amc",
+      "79/79_71.amc"
+    ],
+    "details": "mocap-source.json",
+    "changes": [
+      "Replaced authored Idle/Cheer/Disappointed clips with captured seated, rising, standing, happy and sad performances.",
+      "Retargeted proportions and calibrated shoe soles to captured foot contact height.",
+      "Hands follow forearms; fingers use a relaxed unmeasured pose because CMU finger channels are not recorded.",
+      "Most spectators are seated. Reactions start at different times; no continuous whole-body bouncing.",
+      "Seated posture was selected from the high-stool recording after rejecting the low stool take for this scene. Seat surfaces match the captured hip height."
+    ],
+    "limitations": [
+      "No facial performance capture.",
+      "Background spectators use a limited set of baked captured poses rather than full per-person animation."
+    ]
+  }
+}

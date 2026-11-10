@@ -1,0 +1,210 @@
+.player-card.holo-ticket{
+
+ --x:var(--lx);--y:var(--ly);--angle:132deg;
+ --a:var(--original-a);--b:var(--original-b);--c:var(--original-c);
+ background:#141028;
+}
+.holo-ticket::before,.holo-ticket::after{display:none}
+.roster-holo{
+ position:absolute;
+ inset:0;
+ isolation:isolate;
+ container-type:inline-size;
+  .face {
+    position: absolute;
+    inset: 0;
+    clip-path: url(#yamal-ticket);
+    background:
+      radial-gradient(ellipse at var(--x) var(--y), #fff8 0%, #fff1 31%, transparent 55%),
+      linear-gradient(var(--angle), var(--a), var(--b) 32%, var(--c) 62%, var(--a) 96%);
+  }
+  .metal, .etch, .edge, .light {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+  }
+  .metal { mix-blend-mode: soft-light; opacity: .88; }
+  .etch { mix-blend-mode: overlay; opacity: .54; }
+  .light {
+    background:
+      linear-gradient(calc(var(--angle) + 9deg), #1c124dba 3%, transparent 32%, #fff2 40%, #fffd 49%, #fff8 52%, transparent 64%, #292057a0 91%);
+    background-size: 185% 170%;
+    background-position: var(--x) var(--y);
+    mix-blend-mode: hard-light;
+    opacity: .66;
+  }
+  .face { container-type: inline-size; }
+  .collection, .number, .player, .copy { position: absolute; }
+  .collection {
+    top: 5.5%;
+    inset-inline: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #17172f;
+    font-size: max(7px, 3.8cqw);
+    font-weight: 800;
+    letter-spacing: .16em;
+  }
+  .collection span:last-child {
+    letter-spacing: .05em;
+    border: 1px solid #22213b65;
+    border-radius: 20px;
+    padding: .15em .48em;
+  }
+  .number {
+    inset: 9% auto auto 5%;
+    font-size: 34cqw;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -.095em;
+    color: #fff9;
+    mix-blend-mode: soft-light;
+  }
+  .player {
+    top: 12%;
+    left: -3%;
+    width: 106%;
+    height: auto;
+    mask-image: linear-gradient(#000 63%, #000a 71%, transparent 86%);
+  }
+  .player-shine {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(var(--angle), transparent 27%, #fff5 49%, transparent 64%);
+    background-size: 170% 150%;
+    background-position: var(--x) var(--y);
+    mix-blend-mode: soft-light;
+  }
+  .copy {
+    bottom: 6.5%;
+    width: 88%;
+    left: 6%;
+    text-align: center;
+    color: #17172f;
+    text-shadow: 0 0 8px #eae6ff;
+  }
+  .copy .latin {
+    display: block;
+    margin: 0 0 .28em;
+    font-size: max(7px, 4.1cqw);
+    line-height: 1.2;
+    letter-spacing: .22em;
+    font-weight: 800;
+  }
+  .copy strong {
+    font-size: 15cqw;
+    font-weight: 900;
+    line-height: 1.04;
+    margin: 0 0 .18em;
+    letter-spacing: .08em;
+    overflow-wrap: anywhere;
+  }
+  .copy p { font-size: max(8px, 4.4cqw); line-height: 1.3; margin: 0; font-weight: 700; overflow-wrap: anywhere; }
+
+}
+.roster-holo img.player{
+ position:absolute;top:12%;left:-3%;width:106%;height:auto;
+ z-index:auto;object-fit:initial;mask-image:linear-gradient(#000 63%,#000a 71%,transparent 86%);
+}
+.roster-holo .copy strong{display:block}
+.holo-ticket .selected-mark{
+ position:absolute;right:5%;top:13%;z-index:3;
+ padding:3px 6px;background:#201940d6;border-radius:5px;font-size:10px;
+}
+
+/* Keep confirmation reachable with the ninth card wrapping onto a new row. */
+#stars .selection-bar{bottom:0;margin:16px auto 0}
+
+#stars{padding-top:100px}
+#stars .roster{grid-template-columns:repeat(4,minmax(0,1fr));max-width:1000px}
+#stars .holo-ticket{
+ width:100%;height:auto;min-height:0;aspect-ratio:260 / 372;
+ border:0;border-radius:0;background:none;
+}
+/* Match portrait framing in the selection grid and full card. */
+.face[data-portrait] img.player{
+ top:12%;left:-3%;width:106%;height:83%;
+ object-fit:cover;object-position:center top;
+ mask-image:linear-gradient(#000 58%,#000b 72%,transparent 98%);
+}
+.face[data-portrait="messi"] img.player{
+ top:12%;height:80%;object-position:center 10%;
+ mask-image:radial-gradient(ellipse 54% 63% at 50% 40%,#000 48%,transparent 95%),
+  linear-gradient(transparent,#000 9%,#000 78%,transparent);
+ mask-composite:intersect;
+}
+.roster-holo .copy strong{font-size:12cqw}
+.roster-holo .copy p{margin:0}
+.holo-ticket .selected-mark{display:none}
+.holo-ticket[aria-pressed=true] .selected-mark{display:block}
+#stars .selection-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:end}
+#stars .selection-actions button{white-space:nowrap}
+#full-player-card{
+ width:min(1140px,96vw);height:min(92dvh,900px);max-height:92dvh;
+ padding:0;border:1px solid #baa6e570;border-radius:16px;color:#eee8ff;background:#111015;
+}
+#full-player-card[open]{display:grid;grid-template-rows:auto minmax(0,1fr)}
+#full-player-card::backdrop{background:#070710c9;backdrop-filter:blur(5px)}
+.card-dialog-bar{padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+#full-player-card iframe{width:100%;height:100%;border:0}
+@media(max-width:800px){
+ #stars .roster{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #stars{padding-top:86px}
+ #stars .selection-actions button{font-size:11px;padding:9px}
+}
+
+#stars{animation:none}
+#stars .holo-ticket[data-player="ronaldo"] img.player{
+ top:11%;left:-16%;width:132%;height:82%;object-fit:cover;object-position:center top;
+ mask-image:linear-gradient(#000 60%,#000c 73%,transparent 98%);
+}
+.holo-ticket:is([data-player="ronaldo"],[data-player="yamal"]) .copy strong{font-size:15cqw}
+
+:is(.stage,.holo-ticket)[data-foil="1"] { --a:#5146a1; --b:#c7daee; --c:#d8e2d9; --ink:#19265f; --halo:#bbc9ee; }
+:is(.stage,.holo-ticket)[data-foil="2"] { --a:#24aa86; --b:#9adbd8; --c:#dee7be; --ink:#09513b; --halo:#5de3b3; }
+:is(.stage,.holo-ticket)[data-foil="3"] { --a:#8261da; --b:#c0aff8; --c:#d9d9f5; --ink:#422677; --halo:#9f70ff; }
+:is(.stage,.holo-ticket)[data-foil="4"] { --a:#c44d93; --b:#fac5df; --c:#ffd2c0; --ink:#6c244f; --halo:#f986c9; }
+:is(.stage,.holo-ticket)[data-foil="5"] { --a:#b98137; --b:#efce85; --c:#fff1c2; --ink:#624017; --halo:#ffce75; }
+
+.roster-card-exhibit{
+ min-width:0;display:grid;align-content:start;gap:8px;padding:8px;
+ border:1px solid #bca7e34d;border-radius:16px;
+ background:linear-gradient(145deg,#232138,#111a21 75%);
+}
+#stars .roster-card-exhibit .holo-ticket{touch-action:pan-y}
+.roster-card-tools{
+ display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:3px;
+ padding:3px 0 0;
+}
+.roster-swatch{
+ width:23px;height:27px;padding:0;display:grid;place-items:center;
+ border:0;background:transparent;border-radius:50%;
+}
+.roster-swatch::before{
+ content:"";width:15px;height:15px;border-radius:50%;
+ background:var(--swatch);box-shadow:inset 0 0 0 1px #fff6;
+}
+.roster-swatch[aria-pressed=true]::before{outline:1px solid #fff;outline-offset:2px}
+.roster-edit{
+ margin-left:2px;padding:4px 8px;border:1px solid #ffffff38;border-radius:20px;
+ background:#ffffff10;color:#f0eaff;font-size:11px;
+}
+#roster-card-editor{
+ width:min(390px,92vw);padding:22px;border:1px solid #baa6e580;border-radius:16px;
+ color:#eee8ff;background:#211d2b;
+}
+#roster-card-editor::backdrop{background:#070710c9}
+#roster-card-editor h2{margin:0 0 16px;font-size:21px}
+#roster-card-editor label{display:grid;gap:5px;margin:10px 0}
+#roster-card-editor input{
+ width:100%;padding:8px;border:1px solid #ffffff38;border-radius:6px;
+ background:#15121b;color:inherit;font:inherit;
+}
+.card-edit-actions{display:flex;justify-content:end;gap:8px;margin-top:16px}
+@media(max-width:450px){
+ .roster-card-exhibit{padding:5px}
+ .roster-card-tools{gap:2px}
+ .roster-swatch{width:20px}
+}

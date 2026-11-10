@@ -1,0 +1,75 @@
+{
+  "source": "CMU Graphics Lab Motion Capture Database",
+  "homepage": "https://mocap.cs.cmu.edu/",
+  "license": "May be included in products; source motion data may not be resold directly.",
+  "acknowledgment": "The data used in this project was obtained from mocap.cs.cmu.edu. The database was created with funding from NSF EIA-0196217.",
+  "clips": [
+    {
+      "clip": "Idle",
+      "source": "79_69",
+      "sourceFrames": [
+        0,
+        120
+      ],
+      "sourceFps": 60,
+      "duration": 2.0,
+      "loop": true
+    },
+    {
+      "clip": "Seated",
+      "source": "13_01",
+      "sourceFrames": [
+        600,
+        840
+      ],
+      "sourceFps": 120,
+      "duration": 2.0,
+      "loop": true
+    },
+    {
+      "clip": "Rise",
+      "source": "13_01",
+      "sourceFrames": [
+        900,
+        1030
+      ],
+      "sourceFps": 120,
+      "duration": 1.0666666666666667,
+      "loop": false
+    },
+    {
+      "clip": "Sit",
+      "source": "13_01",
+      "sourceFrames": [
+        1030,
+        900
+      ],
+      "sourceFps": 120,
+      "duration": 1.0666666666666667,
+      "loop": false
+    },
+    {
+      "clip": "Cheer",
+      "source": "79_69",
+      "sourceFrames": [
+        110,
+        740
+      ],
+      "sourceFps": 60,
+      "duration": 10.5,
+      "loop": false
+    },
+    {
+      "clip": "Disappointed",
+      "source": "79_71",
+      "sourceFrames": [
+        110,
+        700
+      ],
+      "sourceFps": 60,
+      "duration": 9.833333333333334,
+      "loop": false
+    }
+  ],
+  "processing": "Retargeted to the MakeHuman spectator rigs. Root displacement retained within short seated and standing captures. CMU finger channels are not measured; relaxed bind fingers are retained. Facial performance is not captured."
+}

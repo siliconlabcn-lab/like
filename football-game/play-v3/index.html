@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>主场 · 球星之夜</title><link rel="stylesheet" href="style.css?v=3q"><script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script><link rel="stylesheet" href="holo-roster.css?v=4a"></head><body>
+<div id="world" aria-label="三维足球场"></div><div class="vignette"></div>
+<header><a href="#start" class="brand">✦ <b>主场</b><span>FOOTBALL CLUB</span></a><div class="header-right"><button id="sound" aria-pressed="false">声音 关</button><button id="view" hidden>视角：跟随</button><button id="pause" hidden>暂停 Ⅱ</button></div></header>
+<main>
+<section id="start" class="screen start"><div class="hero-copy"><p class="eyebrow">YOUR GAME. YOUR MOMENT.</p><h1>这一脚，<br>全场记住。</h1><p class="lead">穿上 7 号球衣，走进你的主场。</p><button class="primary" id="choose-star">选择球星 <span>↗</span></button><div class="mini-features"><span>自由跑动</span><i></i><span>蓄力射门</span><i></i><span>全场欢呼</span></div></div><div class="hero-art"><span class="giant-seven">7</span><picture><source srcset="../game/assets/ronaldo.webp" type="image/webp"><img src="../game/assets/ronaldo.png" alt="C罗"/></picture><div class="nameplate"><span>CRISTIANO</span><strong>RONALDO</strong><p>葡萄牙 · 7 号</p></div></div><div class="bottom-note">九位球星，三种比赛视角。</div></section>
+<section id="stars" class="screen" hidden><div class="step-head"><button class="back" type="button" data-back="start">← 返回首页</button><span><a href="credits.html" target="_blank" rel="noopener">素材鸣谢</a>　·　<a href="yamal-card.html" target="_blank" rel="noopener">亚马尔全息展台 ↗</a>　·　01 / 03 · 选球星</span></div><div class="roster-heading"><div><p class="eyebrow">THE STARTING NINE</p><h2>今晚，谁来上场？</h2><p>选一位喜欢的球星，再决定以什么身份比赛。</p></div><span>9 位球星 · 3 种身份</span></div><div class="roster" id="roster" aria-label="选择你的球星"></div><div class="selection-bar glass"><div><span class="selected-label">你的选择</span><strong id="chosen-name">C 罗</strong><span id="chosen-country">葡萄牙 · 7 号</span></div><div class="selection-actions"><button class="secondary" id="view-full-card" type="button">查看完整卡片</button><button class="primary" id="choose-role">选定 C 罗 →</button></div></div></section>
+<section id="roles" class="screen" hidden><div class="step-head"><button class="back" data-back="stars">← 选球星</button><span>02 / 03 · 选身份</span></div><div class="role-heading"><p class="eyebrow">MAKE IT YOUR GAME</p><h2>今天，你来掌控什么？</h2><p>同一座球场，三种不同的挑战。</p></div><div class="roles-grid"><button class="role-card active" data-role="player" aria-pressed="true"><span class="role-icon">↗</span><small>ATTACK</small><h3>球员</h3><p>带球寻找角度<br>突破门将，完成射门</p><span class="role-tag">5 次射门</span></button><button class="role-card" data-role="keeper" aria-pressed="false"><span class="role-icon">⌁</span><small>DEFEND</small><h3>门将</h3><p>观察来球方向<br>移动、扑救，守住球门</p><span class="role-tag">5 次扑救</span></button><button class="role-card" data-role="referee" aria-pressed="false"><span class="role-icon">⚑</span><small>DECIDE</small><h3>裁判</h3><p>跟随球员跑动<br>看清接触，作出判罚</p><span class="role-tag">4 次判罚</span></button></div><div class="role-footer"><span><b id="role-star">C 罗</b> · <b id="role-selected">球员</b></span><button class="primary" id="prepare">准备上场 <span>→</span></button></div></section>
+<section id="brief" class="screen centered" hidden><div class="brief-panel glass"><p class="eyebrow">03 / 03 · 走进球场</p><h2 id="brief-title">射门挑战</h2><p id="brief-goal"></p><div id="instructions"></div><p id="load-status" role="status">正在准备球员…</p><button class="primary" id="kickoff" disabled>球员准备中…</button><button class="text-button" data-back="roles">重新选择身份</button></div></section>
+<section id="match" class="screen" hidden><div class="scoreboard glass"><div><small id="mode-label">射门挑战</small><strong id="score">0 <em>/ 5</em></strong></div><span class="score-divider"></span><div><small id="round-label">第 1 / 5 球</small><strong id="clock">00:00</strong></div></div><div class="match-tag glass"><span class="live-dot"></span><span id="player-tag">C罗 · 球员</span></div><div id="broadcast" hidden><span id="broadcast-label">球星特写</span><button id="skip-cutaway">下一球 →</button></div><div id="event" role="status" aria-live="polite"><small id="event-small"></small><strong id="event-title"></strong><p id="event-detail"></p></div><div class="match-help glass" id="match-help"></div><div id="shot-controls"><p id="aim-status" role="status">点击球门选择落点</p><label class="power-label" for="power">射门力度 <output id="power-value" for="power">65%</output></label><input type="range" class="power-track" id="power" min="18" max="100" value="65" disabled><button id="action" class="action">射门</button></div><div class="touch-pad" id="touch-pad"><button data-key="KeyW" class="up" aria-label="向前跑">↑</button><button data-key="KeyA" aria-label="向左跑">←</button><button data-key="KeyS" aria-label="向后跑">↓</button><button data-key="KeyD" aria-label="向右跑">→</button></div><div id="ref-controls" hidden><button id="foul" class="primary">鸣哨 · 判犯规</button><button id="play-on" class="secondary">比赛继续</button><button id="ref-replay" class="secondary" disabled>↻ 再看一次</button></div><div class="round-dots" id="round-dots"></div></section>
+<section id="results" class="screen centered" hidden><div class="result-panel glass"><p class="eyebrow">THE FINAL WHISTLE</p><h2 id="result-title">精彩表现！</h2><div class="result-score" id="result-score">3 <span>/ 5</span></div><p id="result-desc"></p><div class="result-actions"><button class="primary" id="again">再来一场 ↗</button><button class="secondary" id="change-role">换个身份</button></div><button class="text-button" data-back="stars">换一位球星</button></div></section>
+</main><div id="pause-panel" class="modal" hidden><div class="glass"><p class="eyebrow">TAKE A BREATH</p><h2>中场休息</h2><button class="primary" id="resume">继续比赛</button><button class="text-button" id="exit-match">退出本场</button></div></div><div id="fatal" hidden role="alert"></div><script type="module" src="app.js?v=4c"></script><svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="yamal-ticket" clipPathUnits="objectBoundingBox">
+      <path d="M.10 0H.90Q1 0 1 .076V.595Q1 .611 .982 .627Q.94 .661 .982 .696Q1 .711 1 .727V.924Q1 1 .90 1H.10Q0 1 0 .924V.727Q0 .711 .018 .696Q.06 .661 .018 .627Q0 .611 0 .595V.076Q0 0 .10 0Z"/>
+    </clipPath>
+    <filter id="yamal-marble" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".017 .023" numOctaves="5" seed="12"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncR type="linear" slope="2.65" intercept="-.82"/><feFuncG type="linear" slope="2.65" intercept="-.82"/><feFuncB type="linear" slope="2.65" intercept="-.82"/><feFuncA type="linear" slope="0" intercept="1"/></feComponentTransfer>
+    </filter>
+    <filter id="yamal-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".73" numOctaves="3" seed="4"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <pattern id="yamal-facets" width="67" height="70" patternUnits="userSpaceOnUse" patternTransform="rotate(-16)">
+      <path d="M0 0 32 8 17 38ZM67 0 32 8 54 29ZM17 38 54 29 38 65ZM0 70 17 38 38 65Z" fill="#fff" fill-opacity=".18"/>
+      <path d="M0 0 17 38 0 70ZM32 8 17 38 54 29ZM67 70 38 65 54 29Z" fill="#130934" fill-opacity=".19"/>
+    </pattern>
+  </defs>
+</svg>
+<template id="roster-hologram"><div class="roster-holo"><div class="face">
+            <svg class="metal" viewBox="0 0 260 372" preserveAspectRatio="none" aria-hidden="true"><rect width="260" height="372" filter="url(#yamal-marble)"/></svg>
+            <svg class="etch" viewBox="0 0 260 372" preserveAspectRatio="none" aria-hidden="true"><rect width="260" height="372" fill="url(#yamal-facets)"/><rect width="260" height="372" filter="url(#yamal-grain)" opacity=".44"/></svg>
+            <div class="light" aria-hidden="true"></div>
+            <div class="number" aria-hidden="true"></div>
+            <img class="player" alt="">
+            <div class="player-shine" aria-hidden="true"></div>
+            <div class="collection"><span></span><span></span></div>
+            <div class="copy">
+              <span class="latin"></span>
+              <strong></strong>
+              <p></p>
+            </div>
+            <svg class="edge" viewBox="0 0 260 372" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M26 0H234Q260 0 260 28V221Q260 227 255.32 233.24Q244.4 245.89 255.32 258.91Q260 264.49 260 270.44V344Q260 372 234 372H26Q0 372 0 344V270.44Q0 264.49 4.68 258.91Q15.6 245.89 4.68 233.24Q0 227 0 221V28Q0 0 26 0Z" fill="none" stroke="#fff" stroke-opacity=".65" stroke-width="2.5"/>
+            </svg>
+          </div>
+        </div><span class="selected-mark">选择</span></template>
+<dialog id="full-player-card" aria-labelledby="full-player-card-title">
+  <div class="card-dialog-bar"><strong id="full-player-card-title">完整球星卡</strong><button class="secondary" id="close-full-card" type="button">返回选人</button></div>
+  <iframe title="互动全息球星卡"></iframe>
+</dialog>
+<dialog id="roster-card-editor" aria-labelledby="roster-card-editor-title">
+  <form method="dialog">
+    <h2 id="roster-card-editor-title">编辑球星卡</h2>
+    <label>标题<input name="cardTitle" maxlength="18" required></label>
+    <label>说明<input name="cardDescription" maxlength="65"></label>
+    <div class="card-edit-actions"><button class="secondary" value="cancel" formnovalidate>取消</button><button class="primary" value="save">保存</button></div>
+  </form>
+</dialog>
+</body></html>
